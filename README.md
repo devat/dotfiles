@@ -1,6 +1,6 @@
 # Dotfiles
 
-My OSX / Ubuntu dotfiles.
+My dotfiles. Framework is is forked from <https://github.com/gf3/dotfiles> (thanks), most of content removed and substituted with my dotfiles. Rest of this README is from original repo.
 
 ## About this project
 
