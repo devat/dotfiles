@@ -8,3 +8,6 @@
 /link/.ssh/*.pem
 /link/.ssh/known_hosts
 
+# Don't commit zsh plugins and history
+/link/.zsh/plugin
+/link/.zsh/history
