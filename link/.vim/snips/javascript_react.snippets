@@ -1,0 +1,74 @@
+global !p
+def complete(t, opts):
+	if t:
+		opts = [ m[len(t):] for m in opts if m.lower().startswith(t.lower())]
+	if len(opts) == 1:
+		return opts[0]
+	return "(" + '|'.join(opts) + ')'
+
+endglobal
+
+snippet react5 "React componennt"
+var React = require('react');
+
+var `!v expand('%:t:r:r')` = React.createClass({
+	render: function(){
+		return(
+			<div>
+				$0
+			</div>
+		);
+	},
+});
+
+module.exports = `!v expand('%:t:r:r')`;
+endsnippet
+
+snippet react "React componennt"
+import React from 'react';
+
+class `!v expand('%:t:r:r')` extends React.Component{
+	render(){
+		return(
+			<$1>
+				$0
+			</$1>
+		);
+	}
+}
+
+export default `!v expand('%:t:r:r')`;
+endsnippet
+
+snippet reme "some react method" !b
+`!p
+methods = [
+	'getInitialState',
+	'componentDidMount',
+	'componentWillUnmount',
+	'getDefaultProps',
+	'componentWillReceiveProps',
+]
+`
+$1`!p snip.rv=complete(t[1], methods)`_$2`!p snip.rv=complete(t[2], ['5', '6'])`
+endsnippet
+
+snippet getInitialState_6 "react getInitialState es6" b
+getInitialState(){
+	return ${1:{
+		$2: ${3:'$4'},$0
+	}};
+}
+endsnippet
+
+snippet getInitialState_5 "react getInitialState es5" b
+getInitialState: function(){
+	return ${1:{
+		$2: ${3:'$0'},$0
+	}};
+},
+endsnippet
+
+snippet rt "react tag <></>"
+<$1>$0</${1/^([\w\d]+).*/$1/}>
+endsnippet

@@ -11,3 +11,8 @@
 # Don't commit zsh plugins and history
 /link/.zsh/plugin
 /link/.zsh/history
+
+# Don't commit vim plugins, temp dir, and plugin manager
+/link/.vim/plugged
+/link/.vim/.temp
+link/.vim/autoload/plug.vim
