@@ -45,12 +45,5 @@ source ~/.zsh/plugin/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 #git clone https://github.com/zsh-users/zsh-history-substring-search
 source ~/.zsh/plugin/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-#git clone https://github.com/tarruda/zsh-autosuggestions
-source ~/.zsh/plugin/zsh-autosuggestions/autosuggestions.zsh
-zle-line-init() {
-    zle autosuggest-start
-}
-zle -N zle-line-init
-
 source ~/.zsh/prompt.zsh
 #}}}
