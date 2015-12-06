@@ -16,3 +16,6 @@
 /link/.vim/plugged
 /link/.vim/.temp
 link/.vim/autoload/plug.vim
+
+# Don't commit trac instances
+/link/.trac/list
